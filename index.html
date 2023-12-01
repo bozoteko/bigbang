@@ -7,40 +7,30 @@
     <style>
         body {
             margin: 0;
-            overflow: hidden; /* Prevent default browser scrollbars */
+            overflow: hidden;
+            background-color: green; /* Set the background color to green */
         }
 
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place the video behind other elements */
-        }
-
-        #iframe-container {
+        #image-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1; /* Place the iframe above the video */
+            z-index: 1;
         }
 
-        #website-iframe {
+        #website-image {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover; /* Maintain the image aspect ratio and cover the entire container */
         }
     </style>
 </head>
 <body>
 
-<iframe id="video-background" src="https://www.youtube.com/embed/5kQ-LFhBQlg?autoplay=1&mute=1&loop=1&playlist=5kQ-LFhBQlg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-<div id="iframe-container">
-    <iframe id="website-iframe" src="https://twitter.com/i/lists/1727308352353616312" frameborder="0"></iframe>
+<div id="image-container">
+    <img id="website-image" src="image.png" alt="Your Image Description">
 </div>
 
 </body>
